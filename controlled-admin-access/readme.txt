@@ -3,8 +3,8 @@ Contributors: waseem_senjer, wprubyplugins
 Donate link: https://wpruby.com
 Tags: access, access manager, capability, role, user
 Requires at least: 4.0
-Tested up to: 6.5
-Stable tag: 2.0.16
+Tested up to: 6.6
+Stable tag: 2.0.17
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -62,6 +62,9 @@ At any given time, you can force logging out any restricted admin if you no long
 3. Settings Page
 
 == Changelog ==
+
+= 2.0.17 =
+Fixed: block access of displaying options.php page, submitting this form was fixed in a previous version (2.0.9).
 
 = 2.0.16 =
 Adding WordPress 6.5 compatibility

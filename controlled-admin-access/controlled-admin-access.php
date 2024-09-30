@@ -15,7 +15,7 @@
  * Plugin Name:       Controlled Admin Access
  * Plugin URI:        https://wpruby.com/product/controlled-admin-access
  * Description:       Grant a temporary limited admin access to others.
- * Version:           2.0.16
+ * Version:           2.0.17
  * Author:            WPRuby
  * Author URI:        https://wpruby.com
  * License:           GPL-2.0+

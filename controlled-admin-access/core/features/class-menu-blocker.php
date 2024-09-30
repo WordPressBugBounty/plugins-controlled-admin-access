@@ -47,11 +47,17 @@ class Menu_Blocker {
 		$url = parse_url((isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
 		$file_name = strtolower(basename($_SERVER['SCRIPT_NAME']));
 
-		if ($file_name === 'options.php') {
-			if (isset($_POST['option_page']) && strtolower($_POST['option_page']) === 'options') {
-				Helper::block_access();
-			}
-		}
+        // block submitting POST requests from options.php directly.
+        if ($file_name === 'options.php') {
+            if (isset($_POST['option_page']) && strtolower($_POST['option_page']) === 'options') {
+                Helper::block_access();
+            }
+        }
+
+        // block access of displaying options.php page
+        if ($file_name === 'options.php' && empty($_POST)) {
+            Helper::block_access();
+        }
 
 		$query = (isset($url['query']) && $url['query']!='')?'?' . $url['query']:'';
 		$slug = urldecode($file_name . $query);
