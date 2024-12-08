@@ -59,6 +59,19 @@ class Menu_Blocker {
             Helper::block_access();
         }
 
+        // Block editing blocked post types.
+        if ($file_name === 'post.php' && isset($_GET['post']) && isset($_GET['action']) && $_GET['action'] === 'edit') {
+            $post_id = intval($_GET['post']);
+            $post_type = get_post_type($post_id);
+            if ($post_type === 'post' && in_array('edit.php', $restricted_items)) {
+                Helper::block_access();
+            }
+
+            if (in_array( sprintf('edit.php?post_type=%s', $post_type), $restricted_items)) {
+                Helper::block_access();
+            }
+        }
+
 		$query = (isset($url['query']) && $url['query']!='')?'?' . $url['query']:'';
 		$slug = urldecode($file_name . $query);
 

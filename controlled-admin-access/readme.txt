@@ -4,7 +4,7 @@ Donate link: https://wpruby.com
 Tags: access, access manager, capability, role, user
 Requires at least: 4.0
 Tested up to: 6.7
-Stable tag: 2.0.18
+Stable tag: 2.1.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -62,6 +62,10 @@ At any given time, you can force logging out any restricted admin if you no long
 3. Settings Page
 
 == Changelog ==
+
+= 2.1.0 =
+Fixed: Block editing blocked post types.
+
 = 2.0.18 =
 Adding WordPress 6.7 compatibility
 
