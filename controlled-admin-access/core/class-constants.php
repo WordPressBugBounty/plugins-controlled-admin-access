@@ -5,7 +5,7 @@ namespace WPRuby_CAA\Core;
 
 class Constants {
 
-	const UTIL_CURRENT_VERSION = '2.1.0';
+	const UTIL_CURRENT_VERSION = '2.1.1';
 
 	// user meta keys
 	const USER_CAA_ACCOUNT = '_caa_account';
