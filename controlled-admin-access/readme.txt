@@ -2,9 +2,9 @@
 Contributors: waseem_senjer, wprubyplugins
 Donate link: https://wpruby.com
 Tags: access, access manager, capability, role, user
-Requires at least: 4.0
+Requires at least: 5.0
 Tested up to: 7.1
-Stable tag: 2.1.3
+Stable tag: 3.0.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -62,6 +62,18 @@ At any given time, you can force logging out any restricted admin if you no long
 3. Settings Page
 
 == Changelog ==
+
+= 3.0.0 =
+* Changed: A redesigned admin screen built with Vue 3, with a new administrators table, add and edit dialog and settings page. All existing settings, restrictions and accounts carry over without any changes.
+* Added: Confirmation before deleting, resetting or bulk deleting administrators.
+* Added: Clear success and error messages for every action, including when a request fails.
+* Added: Keyboard and screen reader support for all controls, dialogs and menus.
+* Added: Responsive layout for tablets and phones.
+* Changed: The admin screen's files are bundled with the plugin and load only on its own page for administrators.
+* Fixed: Selecting a dashboard sub page could also restrict its whole parent menu.
+* Fixed: "After Login Redirect User To" showed an empty value when no valid option was stored. It now shows Dashboard, which is where users were already redirected.
+* Changed: WordPress 5.0 or later is now required.
+* Added: WordPress 7.1 compatibility.
 
 = 2.1.3 =
 Adding WordPress 7.1 compatibility.
